@@ -1,6 +1,6 @@
 # Quick Start
 
-Assuming that the machine already has Docker installed
+Assuming that the machine already has Docker installed:
 
 ```
 docker-compose build
@@ -38,7 +38,7 @@ docker exec verygoodtask_log-server_1 cat /storage/nginx/access.log
 2017-03-17T09:02:29+00:00 993b6c9db370 nginx-access: 172.18.0.1 - - [17/Mar/2017:09:02:28 +0000] "GET / HTTP/1.1" 200 401 "-" "curl/7.49.1" "-"
 ```
 
-After you've finished don't forget to shut down
+After you've finished don't forget to shut down:
 
 ```
 docker-compose down
@@ -49,6 +49,12 @@ and clear the images:
 ```
 docker rmi nginx-docker-task log-server-docker-task log-agent-docker-task
 ```
+
+
+# Related info
+
+[Possible improvements](https://github.com/adubeniuk/verygoodtask/issues/2)
+[Various container logging methods](https://github.com/adubeniuk/verygoodtask/issues/1#issuecomment-287306454)
 
 
 
