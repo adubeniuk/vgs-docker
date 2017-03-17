@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/adubeniuk/verygoodtask.svg?branch=master)](https://travis-ci.org/adubeniuk/verygoodtask)
+
 # Quick Start
 
 Assuming that the machine already has Docker installed:
