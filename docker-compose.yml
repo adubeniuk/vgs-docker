@@ -1,0 +1,21 @@
+version: '2'
+services:
+  nginx:
+    build: ./nginx/
+    image: nginx-docker-task
+    ports:
+     - "8080:80"
+    volumes:
+     - /var/log/nginx
+  log-server:
+    build: ./log-server/
+    image: log-server-docker-task
+  log-agent: 
+    build: ./log-agent/
+    image: log-agent-docker-task
+    volumes_from: 
+     - nginx
+    links: 
+     - log-server
+    depends_on: 
+     - nginx
