@@ -3,6 +3,5 @@ services:
 
 script:
   - docker-compose up -d
-  - wait 5
   - curl --retry 10 --retry-delay 1 -L -I -f http://localhost:8080/
-  - docker exec $(docker-compose ps | grep "log-server" | awk '/ / { print $1 }') cat /storage/nginx/access.log
+  - docker exec verygoodtask_log-server_1 cat /storage/nginx/access.log
