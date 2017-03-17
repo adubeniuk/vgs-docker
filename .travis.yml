@@ -4,4 +4,5 @@ services:
 script:
   - docker-compose up -d
   - curl --retry 10 --retry-delay 1 -L -I -f http://localhost:8080/
+  - sleep 10
   - docker exec verygoodtask_log-server_1 cat /storage/nginx/access.log
